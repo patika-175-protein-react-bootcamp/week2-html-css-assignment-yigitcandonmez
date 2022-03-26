@@ -22,22 +22,16 @@ html {
   background-color: var(--black);
   color: var(--white);
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 62.5%;
 }
 
 body {
-  max-width: 100vw;
   min-height: 100vh;
+  overflow: auto;
 }
 
 .display--flex {
   display: flex;
-}
-
-.container {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 0 2rem;
 }
 /* GLOBAL END */
 
@@ -45,7 +39,7 @@ body {
 header {
   position: relative;
   width: 100%;
-  height: 35vh;
+  height: 30vh;
   justify-content: center;
 }
 
@@ -81,6 +75,12 @@ header {
   -moz-box-shadow: 0px 0px 51px 16px var(--boxShadow);
   box-shadow: 0px 0px 51px 16px var(--boxShadow);
   cursor: pointer;
+  width: 100%;
+  max-width: 18rem;
+}
+
+.header__logo img {
+  width: 100%;
 }
 /* HEADER END */
 
@@ -92,32 +92,43 @@ section::before {
   height: 1.6rem;
 }
 
+.card__wrapper {
+  max-width: 85rem;
+  margin: 4rem auto 2rem auto;
+  padding: 0 2rem;
+}
+
 .card {
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 7.2rem 0 0.2rem 0;
 }
 
 .card__item {
   border: 1px solid var(--gray);
-  margin: 0 0.5rem 4rem 0.5rem;
+  margin: 2rem 0.1rem 2rem 0.1rem;
   padding: 0 1rem;
+  width: 100%;
+  height: auto;
+  max-width: 21rem;
+  min-height: 20.25rem;
 }
 
 .card__item__image {
+  width: 100%;
+  height: 90%;
   margin-top: -2rem;
   border-top: 1px solid var(--gray);
 }
 
 .card__item__image img {
+  width: 100%;
+  height: 100%;
   padding-top: 0.3rem;
-  width: 13.5rem;
-  height: 20.2rem;
   cursor: pointer;
 }
 
 .card__item__title {
-  text-align: center; /* */
+  text-align: center;
   justify-content: center;
   align-items: center;
   height: 3.7rem;
@@ -126,22 +137,6 @@ section::before {
 /* CARD SECTION END */
 
 /* PAGINATION START */
-.pagination {
-  width: 100%;
-  margin: -1.3rem 0.7rem 3rem 0;
-}
-
-.pagination__items {
-  justify-content: center;
-  align-items: center;
-}
-
-.pagination a {
-  color: var(--lightGray);
-  font-weight: bolder;
-  padding: 0.4rem 1rem;
-  text-decoration: none;
-}
 
 .pagination a.active {
   color: var(--black);
@@ -149,12 +144,47 @@ section::before {
   border-radius: 1.2rem;
 }
 
-/* @media query only pagination */
-@media only screen and (max-width: 600px) {
+.pagination__items {
+  justify-content: center;
+}
+.pagination a {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.9rem;
+  color: var(--lightGray);
+  font-weight: bolder;
+  text-decoration: none;
+}
+/* PAGINATION END */
+
+/* MEDIA QUERIES START */
+/* For tablets */
+@media only screen and (min-width: 600px) {
+  .header__logo {
+    max-width: 23.3rem;
+  }
+  .pagination__items {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   .pagination a {
-    font-size: 12px;
-    padding: 0.2rem 0.5rem;
+    color: var(--lightGray);
+    font-weight: bolder;
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+  }
+  .card__item {
+    max-width: 18.2rem;
   }
 }
 
-/* PAGINATION END */
+/* For desktops */
+@media only screen and (min-width: 769px) {
+  .header__logo {
+    max-width: 26.3rem;
+  }
+  .card__item {
+    max-width: 16.2rem;
+  }
+}
+/* MEDIA QUERIES END */
