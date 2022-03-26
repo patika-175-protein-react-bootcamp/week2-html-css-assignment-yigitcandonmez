@@ -94,7 +94,7 @@ section::before {
 
 .card__wrapper {
   max-width: 85rem;
-  margin: 4rem auto 2rem auto;
+  margin: 4.1rem auto 4.1rem auto;
   padding: 0 2rem;
 }
 
@@ -145,6 +145,7 @@ section::before {
 }
 
 .pagination__items {
+  margin: 1rem 0 0 0;
   justify-content: center;
   align-items: center;
 }
