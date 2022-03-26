@@ -109,7 +109,7 @@ section::before {
   padding: 0 1rem;
   width: 100%;
   height: auto;
-  max-width: 21rem;
+  max-width: 23rem;
   min-height: 20.25rem;
 }
 
@@ -146,9 +146,10 @@ section::before {
 
 .pagination__items {
   justify-content: center;
+  align-items: center;
 }
 .pagination a {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   padding: 0.3rem 0.9rem;
   color: var(--lightGray);
   font-weight: bolder;
@@ -162,16 +163,10 @@ section::before {
   .header__logo {
     max-width: 23.3rem;
   }
-  .pagination__items {
-    justify-content: flex-end;
-    align-items: center;
-  }
 
   .pagination a {
-    color: var(--lightGray);
-    font-weight: bolder;
+    font-size: 1rem;
     padding: 0.7rem 1rem;
-    text-decoration: none;
   }
   .card__item {
     max-width: 18.2rem;
@@ -185,6 +180,12 @@ section::before {
   }
   .card__item {
     max-width: 16.2rem;
+  }
+  .pagination__items {
+    justify-content: flex-end;
+  }
+  .pagination a {
+    font-size: 1.2rem;
   }
 }
 /* MEDIA QUERIES END */
